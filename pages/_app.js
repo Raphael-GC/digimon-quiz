@@ -1,6 +1,6 @@
+import Head from 'next/head';
 import React from 'react';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
-import Head from 'next/head';
 import db from '../db.json';
 
 const GlobalStyle = createGlobalStyle`
@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const { theme } = db;
+const { theme } = db.theme;
 
 // eslint-disable-next-line react/prop-types
 export default function App({ Component, pageProps }) {
@@ -36,6 +36,7 @@ export default function App({ Component, pageProps }) {
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        
         <title>Digimon Adventure Quiz | Você é um DigiEscolhido?</title>
         <meta name="title" content="Digimon Adventure Quiz | Você é um DigiEscolhido?" />
         <meta name="description" content="Mostre todo seu conhecimento sobre o mundo dos monstros digitais." />
@@ -52,14 +53,13 @@ export default function App({ Component, pageProps }) {
         <meta property="twitter:description" content="Mostre todo seu conhecimento sobre o mundo dos monstros digitais." />
         <meta property="twitter:image" content={db.bg} />
 
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" /> 
+        <link rel="shortcut icon" href="/favicon.ico" /> 
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
       </Head>
 
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
         <Component {...pageProps} />
       </ThemeProvider>
     </>
