@@ -1,7 +1,5 @@
-import React from 'react'
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import db from '../db.json'
-import Head from '../src/components/Head'
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -33,10 +31,6 @@ const { theme } = db;
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <Head title={db.title} bg={db.bg} description={db.description}>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Component {...pageProps} />
