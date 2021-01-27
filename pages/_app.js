@@ -33,7 +33,9 @@ const { theme } = db;
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <Head title={db.title} bg={db.bg} description={db.description} />
+      <Head title={db.title} bg={db.bg} description={db.description}>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
       <ThemeProvider theme={theme}>
         <GlobalStyle />
