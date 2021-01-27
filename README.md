@@ -1,8 +1,11 @@
 <h1 align="center">
-    <img alt="Digivice Logo" title="#Digimon Adventure Quiz" src=".public/favicon.ico" width="200px" /><br>
+    <img alt="Digivice Logo" title="#Digimon Adventure Quiz" src=".github/Digivice.png" width="200px" /><br>
     Digimon Adventure Quiz
 </h1>
 
+<h3 align="center"> 
+Você foi DigiEscolhido(a) ?
+</h3>
 <h4 align="center"> 
   👨‍💻🗻 "Mostre todo seu conhecimento sobre o mundo dos monstros digitais!" 👩‍💻🗾
 </h4>
