@@ -1,3 +1,5 @@
+import Head from 'next/head'
+//import Link from 'next/link'     (Para fazer apontamento entre as paginas)
 import styled from 'styled-components'
 import db from '../db.json';
 import Widget from '../src/components/Widget'
@@ -53,10 +55,10 @@ export default function Home() {
 
         <Widget>
           <Widget.Header>
-            <h1>Other quizzes</h1>
+            <h1>Quizes da Galera</h1>
           </Widget.Header>
           <Widget.Content>
-            <p>Comming soon...</p>
+            <p>Em breve...</p>
           </Widget.Content>
         </Widget>
         <Footer />
