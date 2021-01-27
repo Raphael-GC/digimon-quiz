@@ -1,5 +1,7 @@
 {
     "bg": "/bg.png",
+    "gitUrl": "https://github.com/Raphael-GC/digimon-quiz",
+    "vercelUrl": "https://digimon-quiz.raphael-gc.vercel.app/",
     "title": "Digimon Adventure Quiz",
     "description": "Mostre todo seu conhecimento sobre o mundo dos monstros digitais.",
     "questions": [

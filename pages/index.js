@@ -1,6 +1,8 @@
+import React from 'react';
 import Head from 'next/head'
 //import Link from 'next/link'     (Para fazer apontamento entre as paginas)
 import styled from 'styled-components'
+
 import db from '../db.json';
 import Widget from '../src/components/Widget'
 import QuizLogo from '../src/components/QuizLogo'
@@ -31,17 +33,44 @@ export const QuizContainer = styled.div`
   }
 `;
 
-// export default function Home() {
-//   return (
-//     <div style={{ backgroundImage: `url(${db.bg})` }}>
-//       My page
-//     </div>
-//   )
-// }
-
+// Head na page principal e não componentizada pois as meta tags não estavam indo dessa forma.
 export default function Home() {
   return (
     <QuizBackground backgroundImage={db.bg}>
+      <Head> 
+        <title>{title}</title>
+        <meta name="title" content={db.title} />
+        <meta
+          name="description"
+          content={db.description}
+        />
+
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content={db.vercelUrl}
+        />
+        <meta property="og:title" content="Digimon Adventure Quiz" />
+        <meta
+          property="og:description"
+          content="Mostre todo seu conhecimento sobre o mundo dos monstros digitais."
+        />
+        <meta property="og:image" content={db.bg} />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={db.bg} />
+        <meta property="twitter:title" content={db.title} />
+        <meta
+          property="twitter:description"
+          content={db.description}
+        />
+        <meta property="twitter:image" content={db.bg} />
+
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
+
+      </Head>
       <QuizContainer>
         <QuizLogo/>
         <Widget>
@@ -63,7 +92,7 @@ export default function Home() {
         </Widget>
         <Footer />
       </QuizContainer>
-      <GitHubCorner projectUrl="https://github.com/Raphael-GC"/>
+      <GitHubCorner projectUrl={db.gitUrl} />
     </QuizBackground>
   )
 }
