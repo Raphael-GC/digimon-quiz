@@ -7,7 +7,7 @@
 Você foi DigiEscolhido(a) ?
 </h3>
 <h4 align="center"> 
-  👨‍💻🗻 "Mostre todo seu conhecimento sobre o mundo dos monstros digitais!" 👩‍💻🗾
+  👨‍💻 "Mostre todo seu conhecimento sobre o mundo dos monstros digitais!" 👩‍💻
 </h4>
 
 <p align="center">
@@ -56,18 +56,11 @@ yarn create next-app --example with-styled-components with-styled-components-app
 
 ### Deploy
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
-
-
-```bash
-npx create-next-app --example with-styled-components with-styled-components-app
-# or
-yarn create next-app --example with-styled-components with-styled-components-app
-```
+Use a plataforma da  [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) para realizar o deploy, criando uma conta hobby (gratuita) e dando permissão de visualização ao repositório do seu projeto.
 
 ### View
 
-[Visualize como fica a página após o deploy da base.](https://codesandbox.io/s/github/vercel/next.js/tree/canary/examples/with-styled-components)
+[Visualize](https://codesandbox.io/s/github/vercel/next.js/tree/canary/examples/with-styled-components)  como fica a página após o deploy da base.
 
 ### Notes
 
