@@ -1,7 +1,7 @@
 {
-    "bg": "https://i.imgur.com/G9Xje6S.jpg",
-    "title": "Digimon Quiz",
-    "description": "Prove your self as a digiDestined!",
+    "bg": "/bg.png",
+    "title": "Digimon Adventure Quiz",
+    "description": "Prove your self as a DigiDestined!",
     "questions": [
         {
             "image": "",
@@ -34,7 +34,7 @@
     "theme": {
       "colors": {
         "primary": "#29b6f6",
-        "secondary": "#29b6f6",
+        "secondary": "#ecd578",
         "mainBg": "#00000170",
         "contrastText": "#FFFFFF",
         "wrong": "#FF5722",

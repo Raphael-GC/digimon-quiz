@@ -34,9 +34,29 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <title>Digimon Adventure Quiz | Você é um DigiEscolhido?</title>
+        <meta name="title" content="Digimon Adventure Quiz | Você é um DigiEscolhido?" />
+        <meta name="description" content="Mostre todo seu conhecimento sobre o mundo dos monstros digitais." />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://digimon-quiz.raphael-gc.vercel.app" />
+        <meta property="og:title" content="Digimon Adventure Quiz | Você é um DigiEscolhido?" />
+        <meta property="og:description" content="Mostre todo seu conhecimento sobre o mundo dos monstros digitais." />
+        <meta property="og:image" content={db.bg} />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://digimon-quiz.raphael-gc.vercel.app" />
+        <meta property="twitter:title" content="Digimon Adventure Quiz | Você é um DigiEscolhido?" />
+        <meta property="twitter:description" content="Mostre todo seu conhecimento sobre o mundo dos monstros digitais." />
+        <meta property="twitter:image" content={db.bg} />
+
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" /> 
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
       </Head>
+
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         {/* eslint-disable-next-line react/jsx-props-no-spreading */}
