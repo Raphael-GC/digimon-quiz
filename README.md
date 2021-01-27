@@ -1,18 +1,49 @@
-# Example app with styled-components
+<h1 align="center">
+    <img alt="Digivice Logo" title="#Digimon Adventure Quiz" src=".public/favicon.ico" width="200px" /><br>
+    Digimon Adventure Quiz
+</h1>
 
-This example features how you use a different styling solution than [styled-jsx](https://github.com/zeit/styled-jsx) that also supports universal styles. That means we can serve the required styles for the first render within the HTML and then load the rest in the client. In this case we are using [styled-components](https://github.com/styled-components/styled-components).
+<h4 align="center"> 
+  👨‍💻🗻 "Mostre todo seu conhecimento sobre o mundo dos monstros digitais!" 👩‍💻🗾
+</h4>
 
-For this purpose we are extending the `<Document />` and injecting the server side rendered styles into the `<head>`, and also adding the `babel-plugin-styled-components` (which is required for server side rendering). Additionally we set up a global [theme](https://www.styled-components.com/docs/advanced#theming) for styled-components using NextJS custom [`<App>`](https://nextjs.org/docs/advanced-features/custom-app) component.
+<p align="center">
+    <a href="https://github.com/Raphael-GC/digimon-quiz/stargazers">
+        <img alt="Stargazers" src="https://img.shields.io/github/stars/Raphael-GC/digimon-quiz?style=social">
+    </a>
+    <a href="https://github.com/Raphael-GC/digimon-quiz/commits/master">
+        <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Raphael-GC/digimon-quiz">
+    </a>
+    <img alt="Repository size" src="https://img.shields.io/github/repo-size/Raphael-GC/digimon-quiz">
+    <img alt="GitHub license" src="https://img.shields.io/github/license/Raphael-GC/digimon-quiz?color=%27072009">
+</p>
 
-## Deploy your own
+<p align="center">
+  <a href="#Sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#Base">Base</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#Deploy">Deploy</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#View">View</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#Notes">Notes</a>
+</p>
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+<br>
+---
+<br>
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-styled-components&project-name=with-styled-components&repository-name=with-styled-components)
+## 👨‍💻 Sobre  
 
-## How to use
+> Este projeto de quiz foi criado durante o evento Imersão React v2 - (Next.js), da Alura. Os vídeos foram ministrados por Mario Souto e Juliana Amoasei. A proposta era criar uma rede de quizzes interligados e utilizar o Next.js com Styled Component, sem arquivos HTML e CSS. Pois tudo está embutido nos arquivos JS. 
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+✅ DIA 1 - Introdução ao Next.JS, Create React App, Styled Components e o Deploy na Vercel.
+* DIA 2 - Estilo SPA, as vantagens do State e usar bem um Linter.
+* DIA 3 - Protocolo HTTP, Envio e busca de dados de um back-end via API e a Construção do formulário do Quiz.
+* DIA 4 - Finalizar o formulário com máquinas de estados para forms, Conexão com quizzes de outras pessoas e Inserção de animações com Lottie.
+* DIA 5 - Ajustes finais e Animação da Home com o FramerMotion.
+
+---
+### Base
+
+Para inciar o projeto é necessário executar [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) com [npm](https://docs.npmjs.com/cli/init) ou [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), conforme exemplo:
 
 ```bash
 npx create-next-app --example with-styled-components with-styled-components-app
@@ -20,11 +51,20 @@ npx create-next-app --example with-styled-components with-styled-components-app
 yarn create next-app --example with-styled-components with-styled-components-app
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+### Deploy
 
-### Try it on CodeSandbox
+Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
 
-[Open this example on CodeSandbox](https://codesandbox.io/s/github/vercel/next.js/tree/canary/examples/with-styled-components)
+
+```bash
+npx create-next-app --example with-styled-components with-styled-components-app
+# or
+yarn create next-app --example with-styled-components with-styled-components-app
+```
+
+### View
+
+[Visualize como fica a página após o deploy da base.](https://codesandbox.io/s/github/vercel/next.js/tree/canary/examples/with-styled-components)
 
 ### Notes
 
