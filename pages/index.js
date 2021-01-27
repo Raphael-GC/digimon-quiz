@@ -40,30 +40,18 @@ export default function Home() {
       <Head> 
         <title>{db.title}</title>
         <meta name="title" content={db.title} />
-        <meta
-          name="description"
-          content={db.description}
-        />
+        <meta name="description" content={db.description} />
 
         <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content={db.vercelUrl}
-        />
+        <meta property="og:url" content={db.vercelUrl} />
         <meta property="og:title" content="Digimon Adventure Quiz" />
-        <meta
-          property="og:description"
-          content="Mostre todo seu conhecimento sobre o mundo dos monstros digitais."
-        />
+        <meta property="og:description" content="Mostre todo seu conhecimento sobre o mundo dos monstros digitais." />
         <meta property="og:image" content={db.bg} />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content={db.bg} />
         <meta property="twitter:title" content={db.title} />
-        <meta
-          property="twitter:description"
-          content={db.description}
-        />
+        <meta property="twitter:description" content={db.description} >
         <meta property="twitter:image" content={db.bg} />
 
         <link rel="icon" href="/favicon.ico" />
