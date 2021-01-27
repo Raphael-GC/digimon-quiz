@@ -34,6 +34,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head title={db.title} bg={db.bg} description={db.description} />
+
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Component {...pageProps} />
