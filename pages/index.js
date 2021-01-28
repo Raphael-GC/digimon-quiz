@@ -11,7 +11,7 @@ import QuizBackground from '../src/components/QuizBackground';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
 import QuizContainer from '../src/components/QuizContainer';
-import InputBase from '../src/components/InputBase';
+import InputBase from '../src/components/Input';
 
 // ---------Background anterior nao responsivo-------------//
 
