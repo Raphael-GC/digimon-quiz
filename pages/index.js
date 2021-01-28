@@ -1,8 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-// import Link from 'next/link'     (Para fazer apontamento entre as paginas);
+// import Link from 'next/link'     (Para fazer apontamento entre as paginas sem router);
 
 import db from '../db.json';
 import Widget from '../src/components/Widget';
@@ -10,6 +10,8 @@ import QuizLogo from '../src/components/QuizLogo';
 import QuizBackground from '../src/components/QuizBackground';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
+import QuizContainer from '../src/components/QuizContainer';
+import InputBase from '../src/components/InputBase';
 
 // ---------Background anterior nao responsivo-------------//
 
@@ -20,24 +22,10 @@ import GitHubCorner from '../src/components/GitHubCorner';
 //   background-position: inherit;
 // `;
 
-export const QuizContainer = styled.div`
-  width: 100%;
-  max-width: 350px;
-  padding-top: 45px;
-  margin: auto 10%;
-  margin-left: 570px; // Para centralizar horizontalmente a Div na tela.
-  margin-top: 30px;  // Para centralizar horizontalmente a Div na tela.
-  @media screen and (max-width: 500px) {
-    margin: 225px auto 5px auto; // Para tirar a Div de cima do Background no mobile.
-    padding: 15px;
-  }
-`;
-
-// Head na page principal e não componentizada pois as meta tags não estavam indo dessa forma.
 export default function Home() {
+  // Head na page principal e não componentizada pois as meta tags não estavam indo dessa forma.
   const router = useRouter();
   const [name, setName] = React.useState('');
-  console.log('retorno do useState', name, setName);
 
   return (
     <QuizBackground backgroundImage={db.bg}>
@@ -71,28 +59,26 @@ export default function Home() {
           </Widget.Header>
           <Widget.Content>
             <p>{db.description}</p>
-            <form onSubit={function (infosDoEvento) {
+
+            <form onSubmit={(infosDoEvento) => {
               infosDoEvento.preventDefault();
-              const name = 'Raphael';
               router.push(`/quiz?name=${name}`);
-              console.log('Fazendo uma submissão por meio do react');
-              
-              // router manda para a próxima página.
+              // router manda para a próxima página. Fazendo uma submissão por meio do react.
             }}
             >
-              <input 
-                onChange={function (infosDoEvento) {
-                  console.log(infosDoEvento.target.value);
+              <InputBase
+                onChange={(infosDoEvento) => {
                   // State
-                  // name = infosDoEvento.target.value;
+
                   setName(infosDoEvento.target.value);
+                  // name = infosDoEvento.target.value;
                 }}
-                placeholder="Diz aí seu nome" 
+                placeholder="Diga aqui seu nome!"
               />
-              <button type="submit" disabled={name.length === 0}>
-                Jogar
-                {name}
-              </button>
+              <br />
+              <QuizContainer.ButtonPlay type="submit" disabled={name.length === 0}>
+                {`Jogar ${name}`}
+              </QuizContainer.ButtonPlay>
             </form>
           </Widget.Content>
         </Widget>

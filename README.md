@@ -38,7 +38,7 @@ Você foi DigiEscolhido(a) ?
 > Este projeto de quiz foi criado durante o evento Imersão React v2 - (Next.js), da Alura. Os vídeos foram ministrados por Mario Souto e Juliana Amoasei. A proposta era criar uma rede de quizzes interligados e utilizar o Next.js com Styled Component, sem arquivos HTML e CSS. Pois tudo está embutido nos arquivos JS. 
 
 ✅ DIA 1 - Introdução ao Next.JS, Create React App, Styled Components e o Deploy na Vercel.
-* DIA 2 - Estilo SPA, as vantagens do State e usar bem um Linter.
+✅ DIA 2 - Estilo SPA, as vantagens do State e usar bem um Linter.
 * DIA 3 - Protocolo HTTP, Envio e busca de dados de um back-end via API e a Construção do formulário do Quiz.
 * DIA 4 - Finalizar o formulário com máquinas de estados para forms, Conexão com quizzes de outras pessoas e Inserção de animações com Lottie.
 * DIA 5 - Ajustes finais e Animação da Home com o FramerMotion.

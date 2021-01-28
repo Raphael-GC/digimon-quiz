@@ -1,12 +1,13 @@
 {
     "bg": "https://64.media.tumblr.com/b335856ed245b24760f587b8005dec31/tumblr_ou03p7NdpH1vkpa0eo5_1280.png",
+    "bg2": "https://64.media.tumblr.com/5f004215f7c5c065ad0987fec17f9142/tumblr_ou03p7NdpH1vkpa0eo7_1280.png",
     "gitUrl": "https://github.com/Raphael-GC/digimon-quiz",
     "vercelUrl": "https://digimon-quiz.raphael-gc.vercel.app/",
     "title": "Digimon Adventure Quiz",
     "description": "Mostre todo seu conhecimento sobre o mundo dos monstros digitais.",
     "questions": [
         {
-            "image": "",
+            "image": "https://media.giphy.com/media/0xB8unHYDeOBD5ue8o/giphy.gif",
             "title": "Question #1",
             "description": "",
             "answer": 1,
@@ -18,7 +19,7 @@
             ]
         },
         {
-            "image": "",
+            "image": "https://media.giphy.com/media/0xB8unHYDeOBD5ue8o/giphy.gif",
             "title": "Question #2",
             "description": "",
             "answer": 2,

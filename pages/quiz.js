@@ -1,5 +1,6 @@
 import React from 'react';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 import db from '../db.json';
 import QuizBackground from '../src/components/QuizBackground';
@@ -12,17 +13,23 @@ export default function Quiz() {
   const { name } = router.query;
 
   return (
-    <QuizBackground backgroundImage={db.bg}>
+    <QuizBackground backgroundImage={db.bg2}>
       <QuizContainer>
         <QuizLogo />
         <Widget>
-          <Widget.Content>
-            <p>
-              <span>Você chegou na Ilha Arquivo!</span>
-              <b>{name}</b>
+          <Widget.Header>
+            <h1>
+              Você chegou na Ilha Arquivo!
+              <br />
+              <br />
+              🏝️ Parabéns,
+              {' '}
+              {name}
+              {' '}
               !!
-            </p>
-          </Widget.Content>
+            </h1>
+
+          </Widget.Header>
         </Widget>
         <Widget>
           <Widget.Header>
@@ -30,8 +37,18 @@ export default function Quiz() {
           </Widget.Header>
           <Widget.Content>
             <p>Prepare-se!</p>
-              //Questões 
+            <ul>
+              <li>Resposta 1</li>
+              <li>Resposta 2</li>
+              <li>Resposta 3</li>
+              <li>Resposta 4</li>
+            </ul>
             <button type="button">Confirmar</button>
+            <button type="submit">
+              <Link href="/">
+                <a>Home</a>
+              </Link>
+            </button>
           </Widget.Content>
         </Widget>
       </QuizContainer>
