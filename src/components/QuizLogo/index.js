@@ -17,7 +17,7 @@ function Logo() {
 
 Logo.propTypes = {
   className: PropTypes.string.isRequired,
-}
+};
 
 const QuizLogo = styled(Logo)`
   margin: auto;

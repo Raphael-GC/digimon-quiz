@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
-//import Link from 'next/link'     (Para fazer apontamento entre as paginas);
+import { useRouter } from 'next/router';
+// import Link from 'next/link'     (Para fazer apontamento entre as paginas);
 
 import db from '../db.json';
 import Widget from '../src/components/Widget';
@@ -10,8 +11,7 @@ import QuizBackground from '../src/components/QuizBackground';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
 
-
-//---------Background anterior nao responsivo-------------//
+// ---------Background anterior nao responsivo-------------//
 
 // const BackgroundImage = styled.div`
 //   background-image: url(${db.bg});
@@ -35,9 +35,13 @@ export const QuizContainer = styled.div`
 
 // Head na page principal e não componentizada pois as meta tags não estavam indo dessa forma.
 export default function Home() {
+  const router = useRouter();
+  const [name, setName] = React.useState('');
+  console.log('retorno do useState', name, setName);
+
   return (
     <QuizBackground backgroundImage={db.bg}>
-      <Head> 
+      <Head>
         <title>{db.title}</title>
         <meta name="title" content={db.title} />
         <meta name="description" content={db.description} />
@@ -60,13 +64,36 @@ export default function Home() {
       </Head>
 
       <QuizContainer>
-        <QuizLogo/>
+        <QuizLogo />
         <Widget>
           <Widget.Header>
             <h1>{db.title}</h1>
           </Widget.Header>
           <Widget.Content>
             <p>{db.description}</p>
+            <form onSubit={function (infosDoEvento) {
+              infosDoEvento.preventDefault();
+              const name = 'Raphael';
+              router.push(`/quiz?name=${name}`);
+              console.log('Fazendo uma submissão por meio do react');
+              
+              // router manda para a próxima página.
+            }}
+            >
+              <input 
+                onChange={function (infosDoEvento) {
+                  console.log(infosDoEvento.target.value);
+                  // State
+                  // name = infosDoEvento.target.value;
+                  setName(infosDoEvento.target.value);
+                }}
+                placeholder="Diz aí seu nome" 
+              />
+              <button type="submit" disabled={name.length === 0}>
+                Jogar
+                {name}
+              </button>
+            </form>
           </Widget.Content>
         </Widget>
 
@@ -80,7 +107,7 @@ export default function Home() {
         </Widget>
         <Footer />
       </QuizContainer>
-      <GitHubCorner projectUrl={db.gitUrl} />  
+      <GitHubCorner projectUrl={db.gitUrl} />
     </QuizBackground>
-  )
+  );
 }

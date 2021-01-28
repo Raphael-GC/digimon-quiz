@@ -30,7 +30,7 @@ Você foi DigiEscolhido(a) ?
 </p>
 
 <br>
----
+
 <br>
 
 ## 👨‍💻 Sobre  
@@ -53,15 +53,17 @@ npx create-next-app --example with-styled-components with-styled-components-app
 # or
 yarn create next-app --example with-styled-components with-styled-components-app
 ```
-
+---
 ### Deploy
 
 Use a plataforma da  [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) para realizar o deploy, criando uma conta hobby (gratuita) e dando permissão de visualização ao repositório do seu projeto.
 
+---
 ### View
 
 [Visualize](https://codesandbox.io/s/github/vercel/next.js/tree/canary/examples/with-styled-components)  como fica a página após o deploy da base.
 
+---
 ### Notes
 
 When wrapping a [Link](https://nextjs.org/docs/api-reference/next/link) from `next/link` within a styled-component, the [as](https://styled-components.com/docs/api#as-polymorphic-prop) prop provided by `styled` will collide with the Link's `as` prop and cause styled-components to throw an `Invalid tag` error. To avoid this, you can either use the recommended [forwardedAs](https://styled-components.com/docs/api#forwardedas-prop) prop from styled-components or use a different named prop to pass to a `styled` Link.
